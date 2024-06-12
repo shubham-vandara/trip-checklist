@@ -33,7 +33,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 400;
   word-spacing: 30px;
-  letter-spacing: -5px;
+  /* letter-spacing: -5px; */
   padding: 2.4rem 0;
 }
 
@@ -43,6 +43,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0.8rem;
 }
 
@@ -63,6 +64,11 @@ input {
   font-weight: 700;
   font-size: 1.8rem;
   cursor: pointer;
+}
+
+input:focus,
+select:focus {
+  outline: none;
 }
 
 .add-form button {
@@ -129,4 +135,45 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 1060px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 3rem;
+    word-spacing: 0px;
+    letter-spacing: 2px;
+  }
+
+  .list ul {
+    display: flex;
+  }
+
+  .stats {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  button,
+  select,
+  input {
+    padding: 1rem 2rem;
+  }
 }
